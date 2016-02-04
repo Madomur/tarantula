@@ -1,6 +1,5 @@
 FROM ruby:1.9.3
-RUN apt-get update -qq && apt-get install -y build-essential nodejs npm nodejs-legacy mysql-client vim
-RUN npm install -g phantomjs
+RUN apt-get update -qq && apt-get install -y build-essential mysql-client
 
 WORKDIR /tarantula
 COPY Gemfile* /tarantula/
